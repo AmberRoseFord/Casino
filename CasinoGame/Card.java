@@ -1,12 +1,12 @@
+package CasinoGame;
 
-/**
- * Write a description of class Card here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Card
-{
-    public static void main(String[] args) {
+public class Card {
+    
+    public void Run() {
+        
+    }
+    private void NumOfCard() {
+        Deck deck = new Deck();
+        
     }
 }
