@@ -1,4 +1,4 @@
-package CasinoGame;
+package Casino;
 
 import java.util.Scanner;
 public class Welcome {

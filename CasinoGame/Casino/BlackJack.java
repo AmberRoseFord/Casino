@@ -1,11 +1,16 @@
-package CasinoGame;
+package Casino;
 
 public class BlackJack {
-    private int cardsNeeded;
+    public int cardsNeeded;
+    private int BlackJack = 21;
+    public BlackJack() {
+        
+    }
     public void Run() {
 
     }
-    private void play(){
+    public void deal() {
+        
     }
     private void startingHand() {
         this.cardsNeeded = 2;
@@ -14,6 +19,7 @@ public class BlackJack {
         this.cardsNeeded = 1;
     }
     private void bet() {
+        Cash cash = new Cash();
         
     }
     public int cardsNeeded(){

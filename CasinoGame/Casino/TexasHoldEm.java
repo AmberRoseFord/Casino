@@ -1,4 +1,4 @@
-package CasinoGame;
+package Casino;
 
 public class TexasHoldEm {
     public int cardsNeeded;
