@@ -2,15 +2,18 @@ package Casino;
 
 import java.util.Scanner;
 public class Choice {
-    private String[] Games= {"1.BlackJack", "2.Texas Hold'em Poker", "3.Five Card Poker", "4.Slot Machines", "5.Craps", "6.Roulette"};
+    public String Games;
     private Scanner Info;
     private int userGame;
+    public Choice() {
+        String[] Games = {"1.BlackJack", "2.Texas Hold'em Poker", "3.Five Card Poker", "4.Slot Machines", "5.Craps", "6.Roulette"};
+    }
     public void Run() {
         Choice();
         userChoice();
     }
     private void Choice() {
-         System.out.println(Games);
+         System.out.println("1.BlackJack " + "2.Texas Hold'em Poker " + "3.Five Card Poker " + "4.Slot Machines " + "5.Craps " + "6.Roulette");
     }
     private void userChoice() {
         BlackJack blackjack = new BlackJack();
