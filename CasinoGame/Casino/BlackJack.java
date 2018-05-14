@@ -1,13 +1,16 @@
 package Casino;
 
 public class BlackJack {
+    Deck deck = new Deck();
+    Cash cash = new Cash();
+    
     public int cardsNeeded;
     private int BlackJack = 21;
     public BlackJack() {
         
     }
     public void Run() {
-
+        cash.ante();
     }
     public void deal() {
         
@@ -16,11 +19,10 @@ public class BlackJack {
         this.cardsNeeded = 2;
     }
     private void hit() {
-        this.cardsNeeded = 1;
+        this.cardsNeeded = cardsNeeded + 1;
     }
     private void bet() {
-        Cash cash = new Cash();
-        
+        cash.betting();
     }
     public int cardsNeeded(){
         return this.cardsNeeded;

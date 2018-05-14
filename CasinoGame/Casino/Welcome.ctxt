@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=void\ Age()
 comment3.params=
 comment3.target=void\ Name()
-numComments=4
+comment4.params=
+comment4.target=void\ StartingCash()
+numComments=5

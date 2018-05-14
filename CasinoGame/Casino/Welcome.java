@@ -3,6 +3,7 @@ package Casino;
 import java.util.Scanner;
 public class Welcome {
     private Scanner Info;
+    Cash cash = new Cash();
     public Welcome () {
      Info = new Scanner(System.in);   
     }
@@ -16,7 +17,7 @@ public class Welcome {
         String age = Info.next(); 
         while (age == "no") {
             System.out.println("I'm sorry but you are not old enough to be here.");
-            break;
+            System.exit(0);
         }
     }
     public void Name() {
@@ -24,5 +25,8 @@ public class Welcome {
         String name = Info.next();
         String playerName = new String(name);
         System.out.println("It is nice to meet you " + name + ".");
+    }
+    public void StartingCash() {
+        cash.ammount();
     }
 }
