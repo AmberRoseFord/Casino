@@ -6,6 +6,9 @@ public class Cash {
     public int cashLeft;
     public int cashBet;
     public int ante = 5;
+    public int cashTotal;
+    public int winnings;
+    public int lost;
     public Cash() {
         Info = new Scanner(System.in);
         
@@ -28,6 +31,7 @@ public class Cash {
         
         if(cashBet < cashLeft) {
             cashLeft = cashLeft - cashBet;
+            this.cashTotal = cashBet + ante;
         } else if (cashBet > cashLeft) {
             moreCash();
         } else if (cashBet == cashLeft) {
@@ -58,5 +62,21 @@ public class Cash {
         System.out.println("The ante for this game is" +  ante +  ".");
         this.cashLeft = cashLeft - ante;
         System.out.println("Bank: " + cashLeft);
+    }
+    public void winnings(){
+        this.winnings = cashTotal * 2;
+        this.cashLeft = cashLeft + winnings;
+        System.out.println("You won " + winnings);
+        System.out.println("You have " + cashLeft);
+    }
+    public void lost() {
+        this.lost = cashTotal;
+        this.cashLeft = cashLeft - cashTotal;
+        System.out.println("You have" + cashLeft);
+    }
+    public void draw() {
+        this.cashLeft = cashLeft + cashBet - ante;
+        System.out.println("You get all your money back except for the ante.");
+        System.out.println("You have" + cashLeft);
     }
 }
