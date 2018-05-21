@@ -12,12 +12,12 @@ public class Cash {
     public Cash() {
         Info = new Scanner(System.in);
         
-        BlackJack blackjack = new BlackJack();
-        TexasHoldEm texasholdem = new TexasHoldEm();
-        FiveCard fivecard = new FiveCard();
-        SlotMachines slotmachines = new SlotMachines();
-        Craps craps = new Craps();
-        Roulette roulette = new Roulette();
+        //BlackJack blackjack = new BlackJack();
+        //TexasHoldEm texasholdem = new TexasHoldEm();
+        //FiveCard fivecard = new FiveCard();
+        //SlotMachines slotmachines = new SlotMachines();
+        //Craps craps = new Craps();
+        //Roulette roulette = new Roulette();
         
     }
     public void ammount() {

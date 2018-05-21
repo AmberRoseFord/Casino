@@ -25,13 +25,12 @@ public class Deck {
     public int sum;
     public String answer;
     public Deck() {
-        Info = new Scanner(System.in);
         
         cardsNeeded = 0;
         deck = 52;
         
-        BlackJack blackjack = new BlackJack();
-        cardsNeeded = cardsNeeded + blackjack.cardsNeeded();
+        //BlackJack blackjack = new BlackJack();
+        //cardsNeeded = cardsNeeded + blackjack.cardsNeeded();
    
         TexasHoldEm texasholdem = new TexasHoldEm();
         cardsNeeded = cardsNeeded + texasholdem.cardsNeeded();
@@ -81,6 +80,8 @@ public class Deck {
     
     
     public void blackjack(){
+        Info = new Scanner(System.in);
+        
         System.out.println(yourCard);
         System.out.println("Your card is worth: " + cardWorth);
         int sumFirst = Info.nextInt();
@@ -91,7 +92,8 @@ public class Deck {
         System.out.println(sum);
     }
     public void hit(){
-         while (sum > 21) {
+        Info = new Scanner(System.in);
+        while (sum > 21) {
             System.out.println("Would you like to hit");
             System.out.println("yes or no?: ");
             String answer = Info.next();
@@ -109,6 +111,7 @@ public class Deck {
         }
     }
     public void winBlackjack(){
+        Info = new Scanner(System.in);
         Cash cash = new Cash();
         
         int dealer = (int)(Math.random() * dealersHand.length + 1);
